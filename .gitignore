@@ -1,0 +1,5 @@
+test_input/
+train_gt/
+train_input/
+sample_submission/
+*.csv
