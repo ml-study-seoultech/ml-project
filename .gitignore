@@ -2,4 +2,6 @@ test_input/
 train_gt/
 train_input/
 sample_submission/
+
+.DS_Store
 *.csv
