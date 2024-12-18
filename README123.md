@@ -1722,7 +1722,7 @@ generate_images(test_input_dir, output_dir)
 ### 결과 및 아쉬운 점
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
-<img src="./result_code1_1.png" alt="이미지 1" style="width: 100%; height: auto;">
+<img src="./images/result_code1_1.png" alt="이미지 1" style="width: 100%; height: auto;">
 </div>
 
 - **결과**: GAN을 활용해 손상된 이미지를 복구하고 컬러화를 수행했으나, 특정 영역에서 자연스러운 복원이 이루어지지 않았습니다.
@@ -1926,9 +1926,9 @@ test_model(model, test_csv, input_dir, transform, save_dir)
 ### 결과 및 아쉬운 점
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
-<img src="./result_code2_1.png" alt="이미지 1" style="width: 30%; height: auto;">
-<img src="./result_code2_2.png" alt="이미지 2" style="width: 30%; height: auto;">
-<img src="./result_code2_3.png" alt="이미지 3" style="width: 30%; height: auto;">
+<img src="./images/result_code2_1.png" alt="이미지 1" style="width: 30%; height: auto;">
+<img src="./images/result_code2_2.png" alt="이미지 2" style="width: 30%; height: auto;">
+<img src="./images/result_code2_3.png" alt="이미지 3" style="width: 30%; height: auto;">
 </div>
 
 - **결과**:
