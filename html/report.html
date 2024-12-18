@@ -1,0 +1,1767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>제목 없음</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="15f0f86e-463d-8041-a3f9-e8d63f3d8985" class="page sans"><header><h1 class="page-title"></h1><p class="page-description"></p></header><div class="page-body"><p id="15f0f86e-463d-8078-8ea3-e5a906b547fe" class="">
+</p><p id="15f0f86e-463d-8056-80ae-f4bb57083fe7" class="">
+</p><h1 id="15f0f86e-463d-8060-9bdf-e598f1cd07a0" class="">Problem </h1><h2 id="15f0f86e-463d-806d-9572-eb7bc8a4214f" class="">Loss image recovering</h2><ul id="15f0f86e-463d-80dd-ad88-c48ba6dc6416" class="bulleted-list"><li style="list-style-type:disc">Loss(masked)된 부분이 있는 흑백 이미지로부터 원본 컬러 이미지 복원</li></ul><ul id="15f0f86e-463d-804a-87fc-e62a5260df3c" class="bulleted-list"><li style="list-style-type:disc">Specific Task : Computer Vision - <strong>MIM : Masked Image Modeling / Coloring / Inpainting</strong></li></ul><p id="15f0f86e-463d-80f8-8cb1-d587ca7c1d89" class="">
+</p><p id="15f0f86e-463d-800e-a93e-d0d21bedc155" class="">Contest link : <a href="https://dacon.io/competitions/official/236420/overview/description">https://dacon.io/competitions/official/236420/overview/description</a></p><h1 id="15f0f86e-463d-8060-8036-dca05d425796" class="">Dataset</h1><h3 id="15f0f86e-463d-800b-8184-d804f85807bf" class="">Structure</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15f0f86e-463d-808e-bb4f-e66b738acbba" class="code"><code class="language-Markdown" style="white-space:pre-wrap;word-break:break-all">open/
+│
+├── train_input/         # Train data 
+│   ├── TRAIN_00000.png  # 29603 512x512 masked grayscale image
+│   ├── TRAIN_00001.png
+│   ├── TRAIN_00002.png
+│   └── ...
+│
+├── train_gt/            # Train_target data (Ground Truth)
+│   ├── TRAIN_00000.png  # 29603 512x512 original colored image
+│   ├── TRAIN_00001.png
+│   ├── TRAIN_00002.png
+│   └── ...
+│
+├── test_input/          # Test data
+│   ├── TEST_00000.png   # 100 512x512 masked grayscale image
+│   ├── TEST_00001.png
+│   ├── TEST_00002.png
+│   └── ...
+│
+├── train.csv             # triain_input / train_gt image path
+└── test.csv             # test_input image path</code></pre><h2 id="15f0f86e-463d-8039-ad4a-fa9fa53ae7ef" class="">Sample Data</h2><div id="15f0f86e-463d-800e-a309-c23e5d96e78b" class="column-list"><div id="15f0f86e-463d-8022-a0c4-ce9b592cd876" style="width:33.33333333333333%" class="column"><figure id="15f0f86e-463d-80da-b525-ea70e250eef7" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00002.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00002.png"/></a><figcaption><strong>TRAIN_00000.png</strong></figcaption></figure></div><div id="15f0f86e-463d-80c4-a2b0-cd514196879d" style="width:33.33333333333334%" class="column"><figure id="15f0f86e-463d-802b-8e69-d0eed6a386b7" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001.png"/></a><figcaption><strong>TRAIN_00001.png</strong></figcaption></figure><p id="15f0f86e-463d-809c-9026-de4eeda4da31" class="">
+</p></div><div id="15f0f86e-463d-807d-8128-c204c3303810" style="width:33.33333333333333%" class="column"><figure id="15f0f86e-463d-801d-8576-dc28700db4e3" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00000.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00000.png"/></a><figcaption><strong>TRAIN_00002.png</strong></figcaption></figure></div></div><div id="15f0f86e-463d-8056-a743-c4fd31c21438" class="column-list"><div id="15f0f86e-463d-80af-8a19-d08a0823a20b" style="width:33.333333333333336%" class="column"><figure id="15f0f86e-463d-80b9-85ff-ff1aab8f2016" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00000%201.png"><img style="width:330.9895935058594px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00000%201.png"/></a><figcaption><strong>TRAIN_00000.png (gt)</strong></figcaption></figure></div><div id="15f0f86e-463d-80c3-ac01-ed8a81f88e95" style="width:33.33333333333333%" class="column"><figure id="15f0f86e-463d-80e2-9b81-da7a51ea689c" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001%201.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001%201.png"/></a><figcaption><strong>TRAIN_00001.png (gt)</strong></figcaption></figure></div><div id="15f0f86e-463d-8069-9520-f22ad61be2e1" style="width:33.33333333333334%" class="column"><figure id="15f0f86e-463d-803d-94bb-ffa741cf915a" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00002%201.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00002%201.png"/></a><figcaption><strong>TRAIN_00002.png (gt)</strong></figcaption></figure></div></div><p id="15f0f86e-463d-80fa-aeea-fd0acac95e56" class="">
+</p><div id="15f0f86e-463d-80a9-bcb7-e900330e8b02" class="column-list"><div id="15f0f86e-463d-8015-91ba-d3537f537429" style="width:33.333333333333336%" class="column"><figure id="15f0f86e-463d-80e1-9f3e-d4ba9d250cc8" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_000.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_000.png"/></a><figcaption><strong>TEST_00000.png</strong></figcaption></figure></div><div id="15f0f86e-463d-804a-a671-f41829f1f257" style="width:33.333333333333336%" class="column"><figure id="15f0f86e-463d-8020-99e8-faac17fa4e18" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_002.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_002.png"/></a><figcaption><strong>TRAIN_00001.png</strong></figcaption></figure></div><div id="15f0f86e-463d-80ab-a670-e9bd03da0188" style="width:33.33333333333333%" class="column"><figure id="15f0f86e-463d-80ab-bd31-cfe1f82e5824" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_001.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TEST_001.png"/></a><figcaption><strong>TRAIN_00002.png</strong></figcaption></figure></div></div><h1 id="15f0f86e-463d-8014-b8e1-e1986b970d12" class="">First approach : GAN</h1><p id="15f0f86e-463d-8013-951f-f79b61dc8f1d" class="">생성적 적대 생성망 GAN(Generative Adversarial Network)</p><figure id="15f0f86e-463d-80cd-b9a6-f48c67a8e4f3" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image.png"><img style="width:707.9688110351562px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image.png"/></a><figcaption><a href="https://www.geeksforgeeks.org/generative-adversarial-network-gan/">https://www.geeksforgeeks.org/generative-adversarial-network-gan/</a></figcaption></figure><p id="15f0f86e-463d-80c6-bb26-e4e9beeaa0e1" class="">GAN은 이미지를 만들어내는 Generator와, 이를 판별하는 Discriminator로 구별됨.</p><p id="d63144ae-0838-4c5a-938f-7283103c9f60" class="">Generator는 실제(now train_gt)와 같은 이미지를 생성하려 하고, Discriminator는 실제 이미지와 생성된 이미지를 구분하려고 한다. 이러한 적대적 학습을 통해 Generator는 점점 더 실제와 유사한 이미지를 생성할 수 있게 된다.</p><p id="15f0f86e-463d-80db-9c9f-ec692f0ed133" class="">첫 번째 시도는 GAN이 mask 부분 복구와 coloring을 동시에 수행하는 것을 목표로 함.</p><p id="15f0f86e-463d-800e-819c-d9cfb7e2a370" class="">
+</p><h2 id="15f0f86e-463d-80ab-a749-e5f3b16dde80" class="">Process overview</h2><ol type="1" id="15f0f86e-463d-80ad-b952-f2f0a95ece9d" class="numbered-list" start="1"><li>입력이 train_input(masked grayscale image)인 Generator 정의.</li></ol><ol type="1" id="15f0f86e-463d-80d4-8c74-c9b3e1a73001" class="numbered-list" start="2"><li>Generator가 mask 영역 복원 및 coloring을 동시 수행</li></ol><ol type="1" id="15f0f86e-463d-8095-becd-c7b6f1f9ca2d" class="numbered-list" start="3"><li>Discriminator가 train_gt(원본 이미지)와 비교해서 판별</li></ol><ol type="1" id="15f0f86e-463d-80e7-802c-d22f6f70b357" class="numbered-list" start="4"><li>Loss 바탕으로 Generator는 더 train_gt와 같은 이미지를 생성하게 됨</li></ol><p id="1600f86e-463d-804b-add2-fc2f4ad8b312" class="">
+</p><h3 id="15f0f86e-463d-80d3-9ceb-c549f7b70f94" class="">Generator</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15f0f86e-463d-80d3-af33-ea0b11212896" class="code"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># Generator
+class GeneratorUNet(nn.Module):
+    def __init__(self):
+        super(GeneratorUNet, self).__init__()
+        self.model = smp.Unet(
+            encoder_name=&quot;resnet34&quot;,
+            encoder_weights=&quot;imagenet&quot;, # pre-trained weight 사용
+            in_channels=1, # train_input은 흑백 이미지
+            classes=3, # 생성할 이미지는 컬러(3채널)
+        )
+
+    def forward(self, x):
+        return self.model(x)
+</code></pre><p id="15f0f86e-463d-8091-bd2a-c8d4ca1674f7" class="">
+</p><h3 id="15f0f86e-463d-8060-9517-ebaaad9c2826" class="">U-net</h3><figure id="15f0f86e-463d-801e-a9c8-c0b37a2c1b9f" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-17_13.19.43.png"><img style="width:707.9774780273438px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-17_13.19.43.png"/></a><figcaption>Ronneberger, O., Fischer, P., &amp; Brox, T. (2015). <em>U-Net: Convolutional networks for biomedical image segmentation</em>. In <em>International Conference on Medical Image Computing and Computer-Assisted Intervention</em> (pp. 234–241). Springer, Cham.</figcaption></figure><p id="15f0f86e-463d-801f-ae6f-d97a928fa87f" class="">U-net은 CNN을 이용한 Encoder-decoder 모델로, 이미지를 압축된 형태로 encoding 후 다시 원래 크기로 복원하는 구조를 가짐.  Encoder→Decoder의 layer를 직접 연결하는 skip connection을 사용하여 세부 정보의 손실을 방지하고, gradient vanishing 문제를 완화하는 특징이 있어 GAN에 자주 사용되는 것으로 알려져 있음.</p><p id="15f0f86e-463d-80f6-bf99-eeee8747df95" class="">인코더로 pre-trained된 resnet을 사용함.</p><p id="15f0f86e-463d-808c-9cdf-e6efdbc1525a" class="">
+</p><p id="15f0f86e-463d-8085-be4b-e008fa726dcd" class="">또한 중요한 이유로, dataset image 크기가 512 x 512인데, pre-trained resnet34의 기본 입력 크기는 224 x 224<strong> </strong>이지만 U-net은 FCN(Fully Convolution Network)이므로 따로 resize하지 않아도 알아서 입출력이 크기에 맞게 잘 동작하므로, U-net을 사용함.</p><p id="15f0f86e-463d-8071-be08-f6f93bf10312" class=""> </p><h3 id="15f0f86e-463d-8079-beb8-e81cdb70ffe7" class="">Discriminator</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15f0f86e-463d-80bd-a31e-f9367957f6fe" class="code"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># Discriminator
+class Discriminator(nn.Module):
+    def __init__(self, in_channels=3):
+        super(Discriminator, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(in_channels, 64, kernel_size=4, stride=2, padding=1),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(128),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(128, 256, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(256),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(256, 1, kernel_size=4, stride=1, padding=0),
+            nn.Sigmoid() # Discriminator는 binary classifier이다
+        )
+
+    def forward(self, x):
+        return self.model(x)
+</code></pre><p id="15f0f86e-463d-807a-b49d-e3a2afabdb53" class="">Disciminator는 Generator가 생성한 이미지가 원본과 동일한지 판별한다.</p><p id="15f0f86e-463d-804a-89b4-e75eb951b336" class="">
+</p><p id="15f0f86e-463d-80aa-b54d-cf264c9085aa" class=""><code>nn.Conv2d(in_channels, 64, kernel_size=4, stride=2, padding=1),</code></p><p id="15f0f86e-463d-8057-86fa-c5380eecce0d" class=""><code>nn.LeakyReLU(0.2, inplace=True)</code></p><p id="15f0f86e-463d-8034-9bab-e12c9eb6c5cd" class="">4x4 filter, stride 2, zero-padding(keras에서는 ‘same’) 으로 다운샘플링.</p><p id="15f0f86e-463d-80ad-8eee-dd19a3e96394" class="">LeakyReLU로 gradient vanish 완화, α=0.2(x&lt;0에서), inplace=True는 pytorch에서 텐서를 직접 수정할 수 있게 해서(복사 후 수정된 텐서 반환이 아닌) 메로리를 절약할 수 있음.</p><p id="15f0f86e-463d-8001-9792-d7ba636b57eb" class="">
+</p><p id="15f0f86e-463d-80c5-aee3-ebb0aed4a47b" class=""><code>nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1),<br/>nn.BatchNorm2d(128),<br/>nn.LeakyReLU(0.2, inplace=True),<br/></code></p><p id="15f0f86e-463d-807f-92a3-fe5816af158c" class="">중간에 Batch Nomalization으로 training 안정화</p><p id="15f0f86e-463d-80fc-81b3-cdcede4a5bbb" class=""><br/><br/><code>nn.Conv2d(256, 1, kernel_size=4, stride=1, padding=0),<br/>nn.Sigmoid()<br/></code> </p><p id="15f0f86e-463d-80c3-b6f4-c6d6308d86e5" class="">출력층에서, Discriminator는 binary classifier이므로 sigmoid를 사용한다.</p><p id="15f0f86e-463d-80ec-ae62-e3c387c1db83" class="">
+</p><h3 id="15f0f86e-463d-8045-9da0-ddf3b1789d1a" class="">Loss </h3><p id="15f0f86e-463d-809c-afc8-c64dfdb8d772" class=""><code>Generator loss = adversarial_loss + (100*pixelwise_loss)</code>  (scale 맞추기 위해 x100)</p><p id="15f0f86e-463d-80f9-9ab8-fda1822871c5" class=""><code>Discriminator loss = (loss_D_real + loss_D_fake)/2  </code></p><table id="15f0f86e-463d-803f-a5c3-f9e3f035bd0f" class="simple-table"><tbody><tr id="15f0f86e-463d-8029-8e3a-ec1739620e69"><td id="~&lt;O?" class=""><strong>모델</strong></td><td id="xm_v" class=""><strong>손실 구성 요소</strong></td><td id="nqJA" class=""><strong>목표</strong></td><td id="|RWZ" class=""><strong>손실 함수</strong></td></tr><tr id="15f0f86e-463d-8061-ac31-c9d6dee17aae"><td id="~&lt;O?" class=""><strong>Generator</strong></td><td id="xm_v" class="">Adversarial Loss </td><td id="nqJA" class="">Discriminator가 생성된 이미지를 <strong>1</strong>로 판별</td><td id="|RWZ" class="">Binary Cross Entropy (BCE)</td></tr><tr id="15f0f86e-463d-8038-a91a-d78da9d41617"><td id="~&lt;O?" class=""></td><td id="xm_v" class="">Pixelwise Loss </td><td id="nqJA" class="">생성 이미지와 실제 이미지(train_gt)와 픽셀 값이 유사하게</td><td id="|RWZ" class="">L1 Loss (절댓값 오차)</td></tr><tr id="15f0f86e-463d-80eb-83b6-c07c4ffcab6d"><td id="~&lt;O?" class=""><strong>Discriminator</strong></td><td id="xm_v" class="">Real Image Loss (Loss_D_read)</td><td id="nqJA" class="">진짜 이미지(train_gt)를 <strong>1</strong>로 판별</td><td id="|RWZ" class="">Binary Cross Entropy (BCE)</td></tr><tr id="15f0f86e-463d-80ff-954f-c9fcc0de8654"><td id="~&lt;O?" class=""></td><td id="xm_v" class="">Fake Image Loss (Loss_D_fake)</td><td id="nqJA" class="">가짜 이미지(생성된 이미지)를 <strong>0</strong>으로 판별</td><td id="|RWZ" class="">Binary Cross Entropy (BCE)</td></tr></tbody></table><p id="15f0f86e-463d-804e-a63a-fe7ecfc63049" class=""><strong>label(train_gt) = 1, label(generator_generated_image) = 0으로 설정</strong></p><p id="15f0f86e-463d-808c-a92f-f3a34decefb1" class="">
+</p><hr id="15f0f86e-463d-80c7-80e1-e4267da31d93"/><p id="1600f86e-463d-80a5-8827-c4880df5ca1e" class="">
+</p><h3 id="15f0f86e-463d-8081-8cba-d37df310193d" class="">Other setting</h3><ul id="1600f86e-463d-80ff-a208-d00f6f8cf12d" class="bulleted-list"><li style="list-style-type:disc">이미지 증강을 사용하려고 했었으나 기존 이미지만 해도 학습 시간이 너무 오래 걸리는 바람에 사용하지 못함</li></ul><ul id="1600f86e-463d-80c9-a0b9-d710181eadef" class="bulleted-list"><li style="list-style-type:disc">본래 AgementedDataset이라는 이름으로, train_gt에서 랜덤 위치를 masking한 후 흑백으로 변경해서, 이것 또한 학습에 사용하려고 함</li></ul><ul id="1600f86e-463d-80d5-aca6-f4459f4d8483" class="bulleted-list"><li style="list-style-type:disc">GAN은 원래 학습이 불안정하기 때문에 early stopping을 사용하지 않고 꽤 많은 epoch를 돌린 후, tensorboard에 기록된 로그를 보고 최적의 모델을 찾고자 했음. 3epoch마다 checkpoint를 저장함.</li></ul><ul id="1600f86e-463d-8092-9fc1-c9029202d6f0" class="bulleted-list"><li style="list-style-type:disc"></li></ul><h2 id="15f0f86e-463d-8075-8416-ed4dbfe55297" class="">Entire Training code</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15f0f86e-463d-8033-b212-eae2b144588c" class="code"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># 코랩 환경에서 google drive 연동
+from google.colab import drive
+drive.mount(&#x27;/content/drive&#x27;)
+
+### Unzip
+
+# 이미 압축 풀었으면 삭제하기 위함 (/content/dataset은 코랩 instance 실행 중에만 접근 가능함)
+!rm -rf /content/dataset
+
+# 구글 드라이브에 압축 풀린 파일 전체를 올려서 하면 로드 속도가 너무 느려서, instance 실행 중에 생성되는 저장공간에 압축 풀어서 로드하면 훨씬 빠르다
+!unzip -qq /content/drive/MyDrive/MLProject/open.zip -d /content/dataset/
+# -qq : verbose=False
+
+# 라이브러리 import
+import random
+import pandas as pd
+import numpy as np
+import os
+import cv2
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader, ConcatDataset
+from torchvision import transforms
+import albumentations as A
+from albumentations.pytorch import ToTensorV2
+!pip install segmentation_models_pytorch
+import segmentation_models_pytorch as smp
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+from PIL import Image
+import warnings
+warnings.filterwarnings(action=&#x27;ignore&#x27;)
+!pip install scikit-image
+# 대회에서 평가지표가 ssim이다
+from skimage.metrics import structural_similarity as ssim
+
+# 디바이스 설정
+device = torch.device(&#x27;cuda&#x27;) if torch.cuda.is_available() else torch.device(&#x27;cpu&#x27;)
+
+
+### Hyperparameter setting
+
+CFG = {
+    &#x27;IMG_SIZE&#x27;:512, # 원래 이미지 크기도 512*512
+    &#x27;EPOCHS&#x27;:30,
+    &#x27;BATCH_SIZE&#x27;:32,
+    &#x27;SEED&#x27;:41
+}
+
+
+### Fix seed
+
+# 시드 고정
+def seed_everything(seed):
+  # Python의 기본 난수 생성기 시드 설정
+  random.seed(seed)  # random 모듈에서 생성되는 난수들을 고정시키기 위해 시드 설정
+  # Python 해시 시드 설정 (파이썬의 해시 기반 객체 비교 등에 영향을 미친다고 함)
+  os.environ[&#x27;PYTHONHASHSEED&#x27;] = str(seed)  # 환경 변수로 설정된 해시 시드 값 고정
+  # NumPy의 난수 생성기 시드 설정
+  np.random.seed(seed)
+  # PyTorch의 CPU 난수 생성기 시드 설정
+  torch.manual_seed(seed)
+  # PyTorch의 GPU 난수 생성기 시드 설정 (CUDA)
+  torch.cuda.manual_seed(seed)
+  # cudnn 연산 결과가 결정적(항상 같게)
+  torch.backends.cudnn.deterministic = True  # True로 설정하면 cudnn 연산이 결정적으로 동작
+  # cudnn에서 연산 속도가 빨라진다고 함
+  torch.backends.cudnn.benchmark = True
+
+seed_everything(CFG[&#x27;SEED&#x27;])
+
+# train_input, train_gt 이미지 경로가 매핑되어있는 csv 파일 로드
+df = pd.read_csv(&#x27;/content/dataset/train.csv&#x27;)
+df # 한번 보기
+
+### Dataset Split
+
+# 데이터셋 분할
+df = df.sample(frac=1).reset_index(drop=True)
+data_size = len(df)
+train_ratio = 0.8 # train set : 80% / validation set : 20%로 분할 (배포용이 아니므로 test set은 안함)
+
+# train set과 validation set크기 계산
+train_size = int(data_size * train_ratio)
+val_size = data_size - train_size
+
+# 데이터셋 분할
+train_df = df.iloc[:train_size]
+val_df = df.iloc[train_size:]
+
+# 확인용 출력
+print(f&quot;Train size: {len(train_df)}&quot;)
+print(f&quot;Validation size: {len(val_df)}&quot;)
+print(f&quot;Total size: {len(train_df) + len(val_df)}&quot;)
+
+## Dataset Define
+
+class OriginalDataset(Dataset):
+    def __init__(self, df, transforms=None):
+        self.df = df.reset_index(drop=True)
+        self.transforms = transforms
+
+    # pytorch dataset class의 필수 메서드들
+
+    def __len__(self): # custom 객체에 len(object) 했을 때 반환할 값
+        return len(self.df) # dataset instance 개수 반환
+
+    # pytorch에서 instance를 로드할 때 이 메서드를 사용함, 객체를 인덱스로 접근 가능하게
+    def __getitem__(self, idx):
+        base_path = &#x27;/content/dataset&#x27;
+        # train.csv에는 ./train_input/TRAIN_00000.png 이런 식으로 있다
+        # 이미지 경로 얻기 위한 전처리
+        input_image_rel_path = self.df.loc[idx, &#x27;input_image_path&#x27;].lstrip(&#x27;./&#x27;)
+        gt_image_rel_path = self.df.loc[idx, &#x27;gt_image_path&#x27;].lstrip(&#x27;./&#x27;)
+
+        input_image_path = os.path.join(base_path, input_image_rel_path)
+        gt_image_path = os.path.join(base_path, gt_image_rel_path)
+
+        # 이미지 로드
+        input_image = Image.open(input_image_path).convert(&#x27;L&#x27;)  # 흑백 이미지
+        gt_image = Image.open(gt_image_path).convert(&#x27;RGB&#x27;)      # 컬러 이미지
+
+        # 이미지 전처리
+        if self.transforms:
+            input_image = self.transforms[&#x27;input&#x27;](input_image)
+            gt_image = self.transforms[&#x27;gt&#x27;](gt_image)
+
+        return input_image, gt_image
+
+### Transform
+
+# 이미지 전처리 (범위를 [-1,1]로 만들면 0 기준 대칭이기 때문에 활성화함수를 쓸 때 안정적이다)
+original_input_transform = transforms.Compose([
+    transforms.ToTensor(), # ToTensor 수행 시 [0,255] -&gt; [0,1]로 바뀜
+    transforms.Normalize(mean=[0.5], std=[0.5]) # 이러면 [0,1] -&gt; [-1,1]로 바뀜
+])
+
+original_gt_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+])
+
+original_transforms = {
+    &#x27;input&#x27;: original_input_transform,
+    &#x27;gt&#x27;: original_gt_transform
+}
+
+## Create Dataset
+
+# 데이터셋 생성
+original_dataset = OriginalDataset(train_df, transforms=original_transforms)
+
+print(f&quot;Original dataset size: {len(original_dataset)}&quot;)
+
+## Dataloader
+
+# train dataloader
+train_loader = DataLoader(original_dataset, batch_size=CFG[&#x27;BATCH_SIZE&#x27;], shuffle=True)
+
+# validation Dataloader
+val_dataset = OriginalDataset(val_df, transforms=original_transforms)
+val_loader = DataLoader(val_dataset, batch_size=CFG[&#x27;BATCH_SIZE&#x27;], shuffle=False)
+
+### GAN Model define
+
+# Generator
+class GeneratorUNet(nn.Module):
+    def __init__(self):
+        super(GeneratorUNet, self).__init__()
+        self.model = smp.Unet(
+            encoder_name=&quot;resnet34&quot;, # 인코더로 resnet34 사용
+            encoder_weights=&quot;imagenet&quot;, # pre-trained 가중치 로드
+            in_channels=1, # train_input은 흑백 이미지이므로
+            classes=3, # generator가 생성할 이미지는 컬러 이미지이므로
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+
+# Discriminator
+class Discriminator(nn.Module):
+    def __init__(self, in_channels=3):
+        super(Discriminator, self).__init__()
+        self.model = nn.Sequential(
+            nn.Conv2d(in_channels, 64, kernel_size=4, stride=2, padding=1),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(128),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(128, 256, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(256),
+            nn.LeakyReLU(0.2, inplace=True),
+
+            nn.Conv2d(256, 1, kernel_size=4, stride=1, padding=0),
+            # binary classifier이다
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+
+## Loss Function &amp; Optimizer
+
+# 손실 함수 및 옵티마이저 설정
+adversarial_loss = nn.BCELoss() # binary crossentropy
+pixelwise_loss = nn.L1Loss() # abs(실제값 - 예측값)
+
+generator = GeneratorUNet().to(device) # GPU로 모델 옮기기
+discriminator = Discriminator().to(device)
+
+# Generator는 Discriminator 피드백을 기반으로 학습하기 때문에 Dicriminator가 학습이 더 빨리 되는 것이 좋다고 한다
+optimizer_G = optim.Adam(generator.parameters(), lr=1e-4, betas=(0.5, 0.999)) # Adam optimizer는 b1, b2가 있음(Momentum + RMSProp), Adam이 가장 보편적
+optimizer_D = optim.Adam(discriminator.parameters(), lr=2e-4, betas=(0.5, 0.999))
+
+
+## Train
+
+!pip install pytorch-msssim
+
+from pytorch_msssim import ssim  # GPU에서 SSIM 계산을 위한 라이브러리
+from tqdm import tqdm  # progress bar 표시 tqdm
+
+# SSIM 계산을 위한 메서드 ssim 계산하려면 denormalize 해야함
+def denormalize(tensor, mean, std):
+    tensor = tensor.clone()
+    for t, m, s in zip(tensor, mean, std):
+        t.mul_(s).add_(m) # (x-mean)/std를 반대로
+    return tensor
+
+# validation
+def validate(generator, dataloader):
+    # validation에는 generator만 있으면 된다
+    generator.eval()
+    total_ssim = 0.0
+    with torch.no_grad(): # validate, inference에는 그래디언트가 필요없음
+        for input_image, gt_image in tqdm(dataloader, desc=&#x27;Validation&#x27;, unit=&#x27;batch&#x27;):
+            input_image = input_image.to(device)
+            gt_image = gt_image.to(device)
+
+            gen_output = generator(input_image)
+
+            # Denormalize , [0,1] 범위 만들기
+            gen_output_denorm = (gen_output * 0.5) + 0.5
+            gt_image_denorm = (gt_image * 0.5) + 0.5
+
+            # Denormalize 했을 때 [0,1] 범위를 벗어나지 않게 하기
+            gen_output_denorm = torch.clamp(gen_output_denorm, 0, 1)
+            gt_image_denorm = torch.clamp(gt_image_denorm, 0, 1)
+
+            # SSIM 계산 (GPU 사용)
+            ssim_value = ssim(gen_output_denorm, gt_image_denorm, data_range=1.0, size_average=True)
+            total_ssim += ssim_value.item() * input_image.size(0)  # 배치 크기를 곱하여 총 SSIM 누적
+
+    # 평균 SSIM 계산
+    avg_ssim = total_ssim / len(dataloader.dataset)
+    return avg_ssim
+
+## Train &amp; Validation
+
+# 체크포인트 불러오기
+checkpoint = torch.load(&#x27;/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/checkpoint_epoch30.pth&#x27;)
+
+#모델 불러오기
+generator.load_state_dict(checkpoint[&#x27;generator_state_dict&#x27;])
+discriminator.load_state_dict(checkpoint[&#x27;discriminator_state_dict&#x27;])
+
+#optimizer 불러오기
+optimizer_G.load_state_dict(checkpoint[&#x27;optimizer_G_state_dict&#x27;])
+optimizer_D.load_state_dict(checkpoint[&#x27;optimizer_D_state_dict&#x27;])
+
+# epoch 정보 불러오기
+#start_epoch = checkpoint[&#x27;epoch&#x27;] + 1  # 다음 에포크부터 시작
+
+#print(f&quot;Start training epoch : {start_epoch}&quot;)
+
+from torch.utils.tensorboard import SummaryWriter
+
+# 로그 저장 디렉토리 설정
+log_dir = &#x27;/content/drive/MyDrive/MLProject/saved/GAN/logs&#x27;
+writer = SummaryWriter(log_dir=log_dir)
+
+# GPU 메모리 비우기
+import gc
+gc.collect()
+torch.cuda.empty_cache()
+
+
+# Train
+# Generator가 생성한 것은 가짜 이미지, train_gt는 진짜 이미지
+real_label = 1.0
+fake_label = 0.0
+
+for epoch in range(CFG[&#x27;EPOCHS&#x27;]):
+    generator.train()
+    discriminator.train()
+    running_loss_G = 0.0
+    running_loss_D = 0.0
+
+    train_loader_tqdm = tqdm(train_loader, desc=f&quot;Epoch [{epoch+1}/{CFG[&#x27;EPOCHS&#x27;]}]&quot;, unit=&quot;batch&quot;)
+
+    for batch_idx, (input_image, gt_image) in enumerate(train_loader_tqdm):
+        input_image = input_image.to(device)
+        gt_image = gt_image.to(device)
+
+        batch_size = input_image.size(0)
+
+        # 연산 시 차원 맞추기 위해서 크기 늘려주는것
+        real_labels = torch.full((batch_size, 1, 1, 1), real_label, device=device)
+        fake_labels = torch.full((batch_size, 1, 1, 1), fake_label, device=device)
+
+        ####### Train Generator #######
+        optimizer_G.zero_grad() #optimizer step 후 그래디언트 리셋
+
+        gen_output = generator(input_image)
+
+        pred_fake = discriminator(gen_output)
+
+        # 레이블 크기를 pred_fake와 동일하게 생성
+        real_labels = torch.ones_like(pred_fake, device=device)
+
+        # Generator는 Discriminator가 진짜 이미지로 분류하게 하는 이미지를 생성하는 것이 목표.
+        # Generator Loss는, Discriminator가 판별한 값 &lt;-&gt;  1(실제 이미지는 레이블이 1이다) 사이의 loss(binary crossentropy)이다
+        loss_G_adv = adversarial_loss(pred_fake, real_labels)
+
+        # 픽셀 수준 loss로, 생성된 이미지와 ground truth 간의 픽셀값 차이에 대한 loss()
+        loss_G_pixel = pixelwise_loss(gen_output, gt_image)
+
+        loss_G = loss_G_adv + 100 * loss_G_pixel # 총 Generator loss는 adv_loss와 pixel loss의 합으로(scale 맞추기 위해서 *100)
+
+        loss_G.backward() # 역전파
+        optimizer_G.step() # optization
+
+        ####### Train Discriminator #######
+        optimizer_D.zero_grad()
+
+        pred_real = discriminator(gt_image) # Discriminator가 train_gt를 진짜로 판별하도록 결과값 저장
+
+        # 레이블 크기를 pred_real과 동일하게 생성
+        real_labels = torch.ones_like(pred_real, device=device)
+
+        loss_D_real = adversarial_loss(pred_real, real_labels) # Discriminator가 평가한 train_gt &lt;-&gt; 1 사이의 loss, Discriminator는 train_gt를 1(진짜)로 판별하도록 학습되어야 한다
+
+        pred_fake = discriminator(gen_output.detach()) #discriminator(gen_output.detach()): gen_output.detach()는 Generator의 출력을 계산에서 분리하여, Discriminator가 Generator의 영향을 받지 않도록 합니다. 가짜 이미지에 대한 예측을 평가합니다.
+
+        # 레이블 크기를 pred_fake와 동일하게 생성
+        fake_labels = torch.zeros_like(pred_fake, device=device)
+
+        loss_D_fake = adversarial_loss(pred_fake, fake_labels) #  Discriminator가 평가한 generator가 생성한 이미지 &lt;-&gt; 0 사이의 loss, generator가 생성한 이미지는 0으로 판별하도록 학습되어야 한다.
+
+        loss_D = (loss_D_real + loss_D_fake) / 2 # 두 loss 평균을 총 Discriminator Loss로
+
+        loss_D.backward()
+        optimizer_D.step()
+
+        running_loss_G += loss_G.item()
+        running_loss_D += loss_D.item()
+
+        # loss_G=2.345 이런 식으로 progress bar에 표시
+        train_loader_tqdm.set_postfix(loss_G=loss_G.item(), loss_D=loss_D.item())
+
+
+        # TensorBoard에 batch당 loss 기록
+        step = epoch * len(train_loader) + batch_idx
+        writer.add_scalar(&#x27;Loss/Generator&#x27;, loss_G.item(), step)
+        writer.add_scalar(&#x27;Loss/Discriminator&#x27;, loss_D.item(), step)
+
+        # 100개의 batch 처리마다 출력으로 간단히 보여주기
+        if (batch_idx + 1) % 100 == 0:
+            input_img = denormalize(input_image[0].cpu(), mean=[0.5], std=[0.5]) # 각 batch 중 첫 번째 이미지 선택
+            gt_img = denormalize(gt_image[0].cpu(), mean=[0.5]*3, std=[0.5]*3)
+            output_img = denormalize(gen_output[0].detach().cpu(), mean=[0.5]*3, std=[0.5]*3) #[0.5]*3은 [0.5, 0.5, 0.5]랑 같음
+
+            input_img = input_img.squeeze()
+            input_img = torch.clamp(input_img, 0, 1)
+            gt_img = torch.clamp(gt_img.permute(1, 2, 0), 0, 1) # PLT에서 쓰기 위해 (channel, height, width)를 (height, width, channel)로 바꿔줌
+            output_img = torch.clamp(output_img.permute(1, 2, 0), 0, 1)
+
+            plt.figure(figsize=(12, 4))
+            plt.subplot(1, 3, 1)
+            plt.imshow(input_img, cmap=&#x27;gray&#x27;)
+            plt.title(&#x27;Input Image&#x27;)
+            plt.axis(&#x27;off&#x27;)
+
+            plt.subplot(1, 3, 2)
+            plt.imshow(gt_img)
+            plt.title(&#x27;Ground Truth&#x27;)
+            plt.axis(&#x27;off&#x27;)
+
+            plt.subplot(1, 3, 3)
+            plt.imshow(output_img)
+            plt.title(&#x27;Generated Image&#x27;)
+            plt.axis(&#x27;off&#x27;)
+
+            plt.show()
+    # checkpoint 저장 (3 epoch당)
+    if epoch % 3 == 0:
+      checkpoint = {
+          &#x27;epoch&#x27;: epoch,
+          &#x27;generator_state_dict&#x27;: generator.state_dict(),
+          &#x27;discriminator_state_dict&#x27;: discriminator.state_dict(),
+          &#x27;optimizer_G_state_dict&#x27;: optimizer_G.state_dict(),
+          &#x27;optimizer_D_state_dict&#x27;: optimizer_D.state_dict(),
+      }
+      checkpoint_save_path = f&#x27;/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/checkpoint_epoch{epoch+1}.pth&#x27;
+      torch.save(checkpoint, checkpoint_save_path)
+
+
+    epoch_loss_G = running_loss_G / len(train_loader)
+    epoch_loss_D = running_loss_D / len(train_loader)
+    print(f&quot;Epoch [{epoch+1}/{CFG[&#x27;EPOCHS&#x27;]}], Generator Loss: {epoch_loss_G:.4f}, Discriminator Loss: {epoch_loss_D:.4f}&quot;)
+
+    # TensorBoard에 에포크별 손실 기록
+    writer.add_scalar(&#x27;Epoch Loss/Generator&#x27;, epoch_loss_G, epoch)
+    writer.add_scalar(&#x27;Epoch Loss/Discriminator&#x27;, epoch_loss_D, epoch)
+
+    # 검증 및 SSIM 계산
+    avg_ssim = validate(generator, val_loader)
+    print(f&quot;Validation SSIM: {avg_ssim:.4f}&quot;)
+
+# 학습 종료 후 SummaryWriter 닫기
+writer.close()
+
+## Inference
+import os
+import torch
+from PIL import Image
+from torchvision import transforms
+from tqdm import tqdm
+import zipfile
+import pandas as pd
+
+# 디바이스 설정 (GPU 사용 가능하면 GPU 사용)
+device = torch.device(&#x27;cuda&#x27; if torch.cuda.is_available() else &#x27;cpu&#x27;)
+
+# 체크포인트 불러오기
+checkpoint = torch.load(&#x27;/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/checkpoint_epoch30.pth&#x27;)
+
+#모델 상태 불러오기
+generator.load_state_dict(checkpoint[&#x27;generator_state_dict&#x27;])
+discriminator.load_state_dict(checkpoint[&#x27;discriminator_state_dict&#x27;])
+
+# 테스트 데이터프레임 로드
+test_df = pd.read_csv(&#x27;/content/drive/MyDrive/MLProject/test.csv&#x27;)
+
+# 테스트 이미지 경로와 결과 저장 경로 설정
+base_path = &#x27;/content/drive/MyDrive/MLProject/MAT&#x27;  # 이미지 파일이 저장된 기본 경로
+output_dir = &#x27;/content/output_images&#x27;
+os.makedirs(output_dir, exist_ok=True)
+
+
+# 입력 이미지에 대한 변환 정의 (학습 시 사용한 것과 동일하게)
+input_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5], std=[0.5])
+])
+
+# 출력 이미지를 저장하기 위한 함수
+def tensor_to_pil(tensor):
+    # Denormalize
+    tensor = tensor.squeeze(0).cpu().clone()
+    tensor = tensor * 0.5 + 0.5  # [-1,1] -&gt; [0,1]
+    tensor = torch.clamp(tensor, 0, 1)
+    # Tensor에서 PIL 이미지로 변환
+    #tensor = tensor.permute(1, 2, 0)  # (C, H, W) -&gt; (H, W, C)
+    print(tensor.shape)
+    image = transforms.ToPILImage()(tensor)
+    return image
+
+# Inference
+generator.eval()
+i=0
+with torch.no_grad():
+    for idx in tqdm(range(len(test_df)), desc=&#x27;Inference&#x27;):
+        # 테스트 데이터프레임에서 이미지 경로 가져오기
+        input_image_rel_path = test_df.loc[idx, &#x27;input_image_path&#x27;].lstrip(&#x27;./&#x27;)
+        input_image_path = os.path.join(base_path, input_image_rel_path)
+        filename = os.path.basename(input_image_path)
+
+        # 입력 이미지 로드 및 전처리
+        input_image = Image.open(input_image_path).convert(&#x27;L&#x27;)
+        # 이미지 크기를 512x512로 조정 (필요한 경우)
+        # 변환 적용
+        input_tensor = input_transform(input_image).unsqueeze(0).to(device)
+
+        # Generator를 통해 출력 이미지 생성
+        gen_output = generator(input_tensor)
+        # 출력 텐서를 PIL 이미지로 변환
+        output_image = tensor_to_pil(gen_output)
+        # 결과 이미지 저장
+        output_path = os.path.join(output_dir, filename)
+        output_image.save(output_path)
+        if i &lt; 10:
+          plt.figure(figsize=(12, 4))
+          plt.subplot(1, 2, 1)
+          plt.imshow(input_image, cmap=&#x27;gray&#x27;)
+          plt.title(&#x27;Input Image&#x27;)
+          plt.axis(&#x27;off&#x27;)
+
+
+          plt.subplot(1, 2, 2)
+          plt.imshow(output_image)
+          plt.title(&#x27;Generated Image&#x27;)
+          plt.axis(&#x27;off&#x27;)
+
+          plt.show()
+          i = i + 1
+# 결과 이미지들을 ZIP 파일로 압축 (제출용)
+zip_filename = &#x27;/content/drive/MyDrive/MLProject/saved/GAN/GAN_30epoch_output.zip&#x27;
+with zipfile.ZipFile(zip_filename, &#x27;w&#x27;) as zipf:
+    for filename in sorted(os.listdir(output_dir)):
+        if filename.endswith(&#x27;.png&#x27;):
+            file_path = os.path.join(output_dir, filename)
+            zipf.write(file_path, arcname=filename)
+
+
+# TensorBoard 로드 및 실행
+%load_ext tensorboard
+%tensorboard --logdir /content/drive/MyDrive/MLProject/saved/GAN/logs
+
+torch.save(checkpoint, &#x27;/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/checkpoint_epoch30.pth&#x27;)</code></pre><h3 id="1600f86e-463d-80f3-ae15-c3184e16e638" class="">Training Review</h3><figure id="1600f86e-463d-8031-aa36-c6819ff436a1" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%201.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%201.png"/></a></figure><figure id="1600f86e-463d-80e0-85ed-fe085715d181" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%202.png"><img style="width:707.96875px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%202.png"/></a></figure><figure id="1600f86e-463d-8062-8e87-e4a4e07fce26" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%203.png"><img style="width:707.96875px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%203.png"/></a></figure><figure id="1600f86e-463d-80e7-9975-e6ebd9db17f5" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%204.png"><img style="width:707.96875px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%204.png"/></a></figure><p id="1600f86e-463d-80a6-8420-e10a1c7db0f7" class="">Training 하면서 보니, 색칠은 그럭저럭 잘 되는 것 같은데 mask recovering이 잘 되지 않는 것으로 보였다. Tensorboard를 보니 학습은 매우 불안정했지만 Generator loss는 계속 감소했기 때문에, 이미지 증강을 통한 더 많은 데이터, 더 많은 반복 학습을 통하면 더 개선될 수 있지 않았을까 생각한다.</p><p id="1600f86e-463d-80be-9586-cf93bedbd63a" class="">
+</p><p id="1600f86e-463d-80c5-b6cd-ff36e3f4ebaa" class="">
+</p><h1 id="1600f86e-463d-806c-bf36-f5909db82358" class="">Second approach : MAT(MIM) + GAN(coloring)</h1><p id="1600f86e-463d-8083-a961-ea1593df9950" class="">Papers With Code에서, 채우기만 전문으로 학습된 모델이 없을까 찾아보았는데, </p><figure id="1600f86e-463d-80fd-833d-dde19f7ed47f" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%205.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%205.png"/></a><figcaption><a href="https://paperswithcode.com/task/image-inpainting#datasets">https://paperswithcode.com/task/image-inpainting#datasets</a></figcaption></figure><p id="1600f86e-463d-807f-af54-e789bd777ed6" class="">그중 공개되어 있으며 모델 크기가 학습에 적당하고 성능도 CelebA-HQ Dataset에서 1등으로 괜찮다고 생각되고, 무엇보다 학습 데이터가 512*512로 이번 데이터셋과 동일한,  MAT: Mask-Aware Transformer for Large Hole Image Inpainting 모델을 사용하기로 함. 또한 이번에는 흑백 사진에서 mask된 영역만 복구한 후에, 이미 학습한 GAN으로 coloring하는 방법을 시도함.</p><p id="1600f86e-463d-807b-ab2b-fea22ddbe188" class="">
+</p><h3 id="1600f86e-463d-80da-bb68-ee883bf2755e" class="">MAT: Mask-Aware Transformer for Large Hole Image Inpainting</h3><figure id="1600f86e-463d-80c3-b69e-f49a64434994" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%206.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%206.png"/></a></figure><div id="1600f86e-463d-804a-8e7a-ccbec9d404ef" class="column-list"><div id="1600f86e-463d-80ca-a787-f8c74958eaf1" style="width:68.75%" class="column"><figure id="1600f86e-463d-8052-83a3-e045b481eff3" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%207.png"><img style="width:384px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%207.png"/></a><figcaption>Adjusted Transformer block</figcaption></figure></div><div id="1600f86e-463d-80c4-bbf8-dd43bf691a74" style="width:31.25%" class="column"><figure id="1600f86e-463d-80c0-92cc-df45e4e34c12" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%208.png"><img style="width:240px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%208.png"/></a><figcaption>Original Transformer block</figcaption></figure></div></div><p id="1600f86e-463d-80fb-a55d-eb1ea4f3d994" class="">기존 접근법(CNN 기반 모델, 트랜스포머 기반 모델)은 한계를 가진다고 함.</p><ol type="1" id="1600f86e-463d-8065-87c4-e1be36998602" class="numbered-list" start="1"><li><strong>CNN 기반 모델</strong>: 근거리 정보에 집중하며, 복잡한 구조를 복원하는 데 한계가 있음.</li></ol><ol type="1" id="1600f86e-463d-80ef-8038-e74e8ee46018" class="numbered-list" start="2"><li><strong>트랜스포머 기반 모델</strong>: 계산 비용 문제로 인해 저해상도에서만 작동, 세부 정보 복원이 부족함.</li></ol><p id="1600f86e-463d-80fe-89b6-dca6765a33db" class="">
+</p><p id="1600f86e-463d-8092-81a9-f25ac92ffd18" class="">위 논문에서 위와 같은 새로운 모델 구조와, Transfomer Block(TB)를 제안하는데, 차이점은 다음과 같음.</p><ol type="1" id="1600f86e-463d-8022-b9a5-d904f87fe92f" class="numbered-list" start="1"><li><strong>Layer Normalization 제거</strong> : large scale mark에서 gradient exploding 문제와, 정규화 과정에서 쓸모없는 토큰들임에도 확대(정규화니까)하는 문제가 있었음<p id="1600f86e-463d-8086-8778-e7fb51c07871" class=""><em>we observe unstable optimization using the general block when handling large-scale<br/>masks, sometimes incurring gradient exploding. We attribute this training issue to the large ratio of invalid tokens (their values are nearly zero). In this circumstance, layer normalization may magnify useless tokens overwhelmingly, leading to unstable training(원문)<br/></em></p><p id="1600f86e-463d-8087-95e5-d5e0f12d10a0" class="">
+</p></li></ol><ol type="1" id="1600f86e-463d-808b-98ed-fd0423d3d49f" class="numbered-list" start="2"><li><strong>Residual connection → Feature concatenation 변경</strong><p id="1600f86e-463d-807e-a17f-c3f3d929aad3" class="">초기에 masked 부분이 많은 상태에서 base 없이 residual connection을 써봤자 의미가 없다는 것</p><p id="1600f86e-463d-80a2-80d2-cd3156f6fedc" class=""><em>residual learning generally encourages the model to learn high-frequency contents. However, considering most tokens are invalid at the beginning, it is difficult to directly learn high-frequency details without proper low-frequency basis in GAN training, which makes the optimization harder(원문)</em></p><ul id="1600f86e-463d-80ab-8007-cfa664fca21d" class="bulleted-list"><li style="list-style-type:disc">또한 transformer block 내에서만 사용했던 residual connection을, Conv layer와 연결되는 Global Residual connection을 사용했다고 함.</li></ul><p id="1600f86e-463d-8023-be4c-ebee08f273ff" class="">
+</p></li></ol><ol type="1" id="1600f86e-463d-80b2-8344-fe73c09038b1" class="numbered-list" start="3"><li> <strong>Style Manipulation Module : </strong>CNN weight에<strong> </strong>noise 주입으로 다양한 표현을 생성할 수 있게 함<p id="1600f86e-463d-8096-b530-c39e47a776e1" class="">
+</p></li></ol><ol type="1" id="1600f86e-463d-8062-b6d4-ce841ce86af9" class="numbered-list" start="4"><li><strong>Multi-Head-Attention → Multi-Head Contextual Attention </strong></li></ol><ul id="1600f86e-463d-8081-a76c-d79453c40a2a" class="bulleted-list"><li style="list-style-type:disc">Multi-Head Attention (기존 transformer):<ul id="1600f86e-463d-8073-b37d-c68764568bc9" class="bulleted-list"><li style="list-style-type:circle">전체 입력 토큰에 대해 Attention 계산</li></ul></li></ul><ul id="1600f86e-463d-80ba-afb5-e66fd8172bf9" class="bulleted-list"><li style="list-style-type:disc"><strong>Multi-Head Contextual Attention (MCA):</strong><figure id="1600f86e-463d-80b1-9f8d-d42583d94a23" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%209.png"><img style="width:452.951416015625px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%209.png"/></a></figure></li></ul><p id="1600f86e-463d-80fd-bf70-c248d9dc70b7" class=""><div class="indented"><ul id="1600f86e-463d-809a-a3a0-e8aad4f63b42" class="bulleted-list"><li style="list-style-type:disc">입력 토큰을 고정된 크기의 window로 나눈 뒤, 각 window 내에서만 attention 계산 수행, attention 수행 후 window 이동시키기 (w*w size에서  <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mo stretchy="false">⌊</mo><mi>w</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌋</mo><mo separator="true">,</mo><mo stretchy="false">⌊</mo><mi>w</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌋</mo><mo stretchy="false">)</mo><mi>p</mi><mi>i</mi><mi>x</mi><mi>e</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">(⌊
+w/
+2
+⌋, ⌊
+w/
+2
+⌋) pixel</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(⌊</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord">/2</span><span class="mclose">⌋</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mopen">⌊</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord">/2</span><span class="mclose">⌋)</span><span class="mord mathnormal">p</span><span class="mord mathnormal">i</span><span class="mord mathnormal">x</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span></span><span>﻿</span></span> 이동한다고 함)</li></ul><ul id="1600f86e-463d-80cf-9768-e28a075aed3e" class="bulleted-list"><li style="list-style-type:disc">이는 계산 효율성을 높이고 (일부에 대해서만 계산하면 되기 떄문에), 지역적(local) 및 장거리(global) 관계를 점진적으로 모델링할 수 있게 함.</li></ul><p id="1600f86e-463d-80a9-b3d0-e48d67b1bfdf" class="">
+</p><ul id="1600f86e-463d-80cc-9e12-df30d1cea0d3" class="bulleted-list"><li style="list-style-type:disc"><strong>Mask Updating Strategy :  valid token끼리만 attention 계산하기 위함 </strong><ul id="1600f86e-463d-80c4-bb25-c20d8998f81c" class="bulleted-list"><li style="list-style-type:circle"><em>default attention strategy not only fails to borrow visible<br/>information to inpaint the holes, but also undermines the effective valid pixels<br/></em> (원문)</li></ul><ul id="1600f86e-463d-80cd-8ef6-f96bbe946d33" class="bulleted-list"><li style="list-style-type:circle">기존 attention 계산을 사용하면 Missing area가 많을수록 missing area의 정보도 계산에 사용하기 때문에 좋지 않다고 함</li></ul></li></ul><figure id="1600f86e-463d-80a8-ab05-d95929212fed" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2010.png"><img style="width:326.9531555175781px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2010.png"/></a></figure><p id="1600f86e-463d-80b2-a697-e0f2c8ca5aa8" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">τ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span></span><span>﻿</span></span>는 매우 큰 자연수. Foward step에서 Mask는 업데이트되는데, 규칙은 다음과 같음.<div class="indented"><ul id="1600f86e-463d-80ee-b365-c0b02eea415e" class="bulleted-list"><li style="list-style-type:disc">window 내에 적어도 하나의 valid token이 존재하면, window 내 모든 token이 valid로 업데이트</li></ul><ul id="1600f86e-463d-8071-b7c5-c577147deabf" class="bulleted-list"><li style="list-style-type:disc">window 내 모든 토큰이 invalid인 경우, 그대로 invalid로 남음.</li></ul><p id="1600f86e-463d-8050-a46e-dd5a1ad4d91d" class="">
+</p><p id="1600f86e-463d-8061-b489-d11e4223c365" class="">Transformer block 차이점 정리</p><table id="1600f86e-463d-80f6-b88b-e73bc5846433" class="simple-table"><tbody><tr id="1600f86e-463d-80f7-bbf3-d78401d9c10b"><td id="GEQN" class=""><strong>특징</strong></td><td id="@gYb" class=""><strong>기존 Transformer Block</strong></td><td id="Jt^}" class=""><strong>Adjusted Transformer Block</strong></td></tr><tr id="1600f86e-463d-80f7-997c-c5e1c8530ca8"><td id="GEQN" class=""><strong>Layer Normalization</strong></td><td id="@gYb" class="">사용</td><td id="Jt^}" class="">제거 (학습 안정성 확보)</td></tr><tr id="1600f86e-463d-80c1-a615-fa7be8703d81"><td id="GEQN" class=""><strong>Residual Learning</strong></td><td id="@gYb" class=""><strong>Residual connection</strong></td><td id="Jt^}" class="">Feature Concatenation으로 변경 (저주파수 기반 학습)</td></tr><tr id="1600f86e-463d-80a8-9892-f6d04f66dd8c"><td id="GEQN" class=""><strong>Positional Embedding</strong></td><td id="@gYb" class="">사용</td><td id="Jt^}" class="">생략 (3×3  ConV layer로 대체, 경험적으로 위치정보를 제공하는데 충분했다고 함)</td></tr><tr id="1600f86e-463d-8032-b6f7-d0a25e95aa97"><td id="GEQN" class=""><strong>Attention Method</strong></td><td id="@gYb" class="">Multi-Head-Attention</td><td id="Jt^}" class="">Multi-Head Contextual Attention </td></tr></tbody></table></div></p></div></p><hr id="1600f86e-463d-80fe-86e6-fc936b257aad"/><h2 id="1600f86e-463d-803a-9286-fea3e70bd923" class="">MAT + GAN Training</h2><p id="1600f86e-463d-8022-930b-c04836602c42" class="">
+</p><h3 id="1600f86e-463d-80a0-b733-ea4acb025ee2" class="">MAT을 이용한 Inpainting (grayscale → grayscale)</h3><ul id="1600f86e-463d-8059-9b5a-e154fdf613fd" class="bulleted-list"><li style="list-style-type:disc">mask된 흑백 이미지에서 손실 영역만 복구하는 과정.</li></ul><ul id="1600f86e-463d-800c-9294-e932518cd381" class="bulleted-list"><li style="list-style-type:disc">논문에서 공개된, <a href="https://github.com/fenglinglwb/mat">https://github.com/fenglinglwb/mat</a>(<a href="https://github.com/fenglinglwb/mat">https://github.com/fenglinglwb/mat</a>) 모델 사용</li></ul><p id="1600f86e-463d-80a9-8d0e-f59581bab8c8" class="">
+</p><p id="1600f86e-463d-80dc-844b-ed33ceaaac98" class="">
+</p><ol type="1" id="1600f86e-463d-801d-b35f-f3cffb29abc1" class="numbered-list" start="1"><li><strong>TRAIN_input에 대한 mask 생성 → mask를 생성하는 모델 만들기</strong></li></ol><ul id="1600f86e-463d-808a-b888-c324bd43faf5" class="bulleted-list"><li style="list-style-type:disc">MAT 모델은 검은색으로 마스킹된 부분에 대해서만 inpainting작업을 수행한다.  따라서 train_input에서 어떤 부분이 mask되었는지 판별하여, 그 부분에 대해서만 검은색으로 색칠된  mask image가 필요</li></ul><figure id="1600f86e-463d-8070-bbf7-c868dcfa6048" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2011.png"><img style="width:707.953125px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2011.png"/></a></figure><ul id="1600f86e-463d-8040-b0a1-de2fc27cf2a6" class="bulleted-list"><li style="list-style-type:disc">Train 이미지의 masking 영역은 완전한 검은색 또는 회색 등 일정한 색이 아니다.<p id="1600f86e-463d-80b4-819c-c62986a33f99" class="">→ YOLO 등 기존 Image segementaion model 사용 불가, 비슷한 색이면 mask로 인식해버린다</p><p id="1600f86e-463d-80f3-9810-ee14702475a8" class=""> </p></li></ul><ul id="1600f86e-463d-807c-8bd0-e4903b12cb76" class="bulleted-list"><li style="list-style-type:disc">어떻게 train_input에서 masked area를 파악할 것인가? → train_input과 train_gt(흑백으로 변환)를 비교해서, 다른 부분을 <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mrow><mi>t</mi><mi>a</mi><mi>r</mi><mi>g</mi><mi>e</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">y_{target}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">g</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>으로 설정. 이를 기반으로 image segmentation 모델 만들기</li></ul><ul id="1600f86e-463d-80e2-ad0e-f78d45b30a24" class="bulleted-list"><li style="list-style-type:disc">train_input이  train_X, mask(단순 픽셀비교를 통해 다른 부분이 검은색으로 칠해진 이미지)가 정답값이 되는 것</li></ul><p id="1600f86e-463d-80e6-9437-d80cdfe17a80" class="">
+</p><ul id="1600f86e-463d-8099-afed-e87797cf3594" class="bulleted-list"><li style="list-style-type:disc">Image Sementaion 모델은 U-net 사용, target_y는 Dataset class에서 직접 생성</li></ul><ul id="1600f86e-463d-807d-ab89-e6224c0cb9d8" class="bulleted-list"><li style="list-style-type:disc">Loss는<code>criterion = nn.BCEWithLogitsLoss()</code> 를 사용했는데, U-net의 마지막 출력층에 sigmoid가 적용되지 않아서 출력이 0~1의 확률값이 아니어도 BCELoss를 계산할 수 있게 해준다.</li></ul><ul id="1600f86e-463d-8016-9c9d-f6a684298a74" class="bulleted-list"><li style="list-style-type:disc">또한 이 Image Segmentation Model은 Pixel 단위 이진 분류(mask인지 아닌지)를 수행하기 때문에, BCE Loss를 사용하는 것이 적절하다.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1600f86e-463d-805d-bf7e-dc9c83cce1c4" class="code"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all"># Dataset
+class SegmentationDataset(Dataset):
+    def __init__(self, input_dir, gt_dir, transforms=None):
+        self.input_dir = input_dir
+        self.gt_dir = gt_dir
+        self.transforms = transforms
+
+        # 이미지 파일 목록 가져오기
+        self.input_images = sorted(glob(os.path.join(self.input_dir, &#x27;*&#x27;)))
+        self.gt_images = sorted(glob(os.path.join(self.gt_dir, &#x27;*&#x27;)))
+
+    def __len__(self):
+        return len(self.input_images)
+
+    def __getitem__(self, idx):
+        # 이미지 경로
+        input_image_path = self.input_images[idx]
+        gt_image_path = self.gt_images[idx]
+
+        # 이미지 로드 및 흑백으로 변환
+        input_image = Image.open(input_image_path).convert(&#x27;L&#x27;)
+        gt_image = Image.open(gt_image_path).convert(&#x27;L&#x27;)  # 컬러 이미지를 흑백으로 변환
+
+        # numpy 배열로 변환
+        input_array = np.array(input_image)
+        gt_array = np.array(gt_image)
+
+        # 세그멘테이션 마스크 생성
+        # 마스킹된 영역: 0, 나머지 영역: 1 (train_input과 train_gt가 같으면 검은색(0) 다르면 흰색(1)
+        mask = (input_array == gt_array).astype(np.float32)
+
+        # 변환 적용
+        if self.transforms:
+            input_image = self.transforms[&#x27;input&#x27;](input_image)
+            mask = self.transforms[&#x27;mask&#x27;](mask)
+				
+				#input_image가 train_X, mask가 target_y(정답값)이 되는 것
+        return input_image, mask|</code></pre><p id="1600f86e-463d-80e3-bb75-d91c11e7532b" class="">
+</p><h2 id="1600f86e-463d-804a-8045-ec226265ea9c" class="">Entire Training Code</h2><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1600f86e-463d-8013-a15f-d0ef71f862f2" class="code"><code class="language-Python">from google.colab import drive
+drive.mount(&#x27;/content/drive&#x27;)
+
+#!unzip -qq /content/drive/MyDrive/MLProject/train_dataset.zip -d /content/dataset/
+!mkdir -p /content/dataset/
+!unzip -qq /content/drive/MyDrive/MLProject/open.zip -d /content/dataset/train_dataset/
+
+import os
+print(len(os.listdir(&#x27;/content/drive/MyDrive/MLProject/MAT/masks&#x27;)))
+print(len(os.listdir(&#x27;/content/dataset/train_dataset/train_input&#x27;)))
+
+## MASK 생성
+
+import os
+import numpy as np
+from PIL import Image
+from glob import glob
+from tensorboard import SummaryWriter
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader, random_split
+from torchvision import transforms
+from tqdm import tqdm
+
+# Colab에서 TensorBoard를 사용하기 위한 설정
+%load_ext tensorboard
+
+# Pre-trained 되지 않은 U-net
+class UNet(nn.Module):
+    def __init__(self, in_channels=1, out_channels=1): # 흑백 이미지에서 흑백 마스크만 생성하는 것이므로 입출력 채널은 1 
+        super(UNet, self).__init__()
+        # Convolution-BatchNormalization-ReLU
+        def CBR(in_channels, out_channels):
+            return nn.Sequential(
+                nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1),
+                nn.BatchNorm2d(out_channels),
+                nn.ReLU(inplace=True)
+            )
+
+        self.enc1 = CBR(in_channels, 64)
+        self.pool1 = nn.MaxPool2d(2)
+
+        self.enc2 = CBR(64, 128)
+        self.pool2 = nn.MaxPool2d(2)
+
+        self.enc3 = CBR(128, 256)
+        self.pool3 = nn.MaxPool2d(2)
+
+        self.enc4 = CBR(256, 512)
+        self.pool4 = nn.MaxPool2d(2)
+
+        self.bottleneck = CBR(512, 1024)
+
+        # 디코더
+        self.upconv4 = nn.ConvTranspose2d(1024, 512, kernel_size=2, stride=2)
+        self.dec4 = CBR(1024, 512)
+
+        self.upconv3 = nn.ConvTranspose2d(512, 256, kernel_size=2, stride=2)
+        self.dec3 = CBR(512, 256)
+
+        self.upconv2 = nn.ConvTranspose2d(256, 128, kernel_size=2, stride=2)
+        self.dec2 = CBR(256, 128)
+
+        self.upconv1 = nn.ConvTranspose2d(128, 64, kernel_size=2, stride=2)
+        self.dec1 = CBR(128, 64)
+
+        # 출력 레이어
+        self.conv_last = nn.Conv2d(64, out_channels, kernel_size=1)
+
+    def forward(self, x):
+        # 인코더
+        enc1 = self.enc1(x)
+        pool1 = self.pool1(enc1)
+
+        enc2 = self.enc2(pool1)
+        pool2 = self.pool2(enc2)
+
+        enc3 = self.enc3(pool2)
+        pool3 = self.pool3(enc3)
+
+        enc4 = self.enc4(pool3)
+        pool4 = self.pool4(enc4)
+
+        bottleneck = self.bottleneck(pool4)
+
+        # 디코더
+        up4 = self.upconv4(bottleneck)
+        up4 = torch.cat([up4, enc4], dim=1)
+        dec4 = self.dec4(up4)
+
+        up3 = self.upconv3(dec4)
+        up3 = torch.cat([up3, enc3], dim=1)
+        dec3 = self.dec3(up3)
+
+        up2 = self.upconv2(dec3)
+        up2 = torch.cat([up2, enc2], dim=1)
+        dec2 = self.dec2(up2)
+
+        up1 = self.upconv1(dec2)
+        up1 = torch.cat([up1, enc1], dim=1)
+        dec1 = self.dec1(up1)
+
+        # 출력
+        out = self.conv_last(dec1)
+        return out
+
+# 7. 디바이스 설정
+device = torch.device(&#x27;cuda&#x27; if torch.cuda.is_available() else &#x27;cpu&#x27;)
+
+# 모델 초기화
+model = UNet(in_channels=1, out_channels=1)
+model = model.to(device)
+
+
+# 데이터 경로 설정
+train_x_path = &#x27;/content/dataset/train_dataset/train_input&#x27;
+label_y_path = &#x27;/content/dataset/train_dataset/train_gt&#x27;
+
+# Dataset
+class SegmentationDataset(Dataset):
+    def __init__(self, input_dir, gt_dir, transforms=None):
+        self.input_dir = input_dir
+        self.gt_dir = gt_dir
+        self.transforms = transforms
+
+        # 이미지 파일 목록 가져오기
+        self.input_images = sorted(glob(os.path.join(self.input_dir, &#x27;*&#x27;)))
+        self.gt_images = sorted(glob(os.path.join(self.gt_dir, &#x27;*&#x27;)))
+
+    def __len__(self):
+        return len(self.input_images)
+
+    def __getitem__(self, idx):
+        # 이미지 경로
+        input_image_path = self.input_images[idx]
+        gt_image_path = self.gt_images[idx]
+
+        # 이미지 로드 및 흑백으로 변환
+        input_image = Image.open(input_image_path).convert(&#x27;L&#x27;)
+        gt_image = Image.open(gt_image_path).convert(&#x27;L&#x27;)  # 컬러 이미지를 흑백으로 변환
+
+        # numpy 배열로 변환
+        input_array = np.array(input_image)
+        gt_array = np.array(gt_image)
+
+        # 세그멘테이션 마스크 생성
+        # 마스킹된 영역: 0, 나머지 영역: 1 (train_input과 train_gt가 같으면 검은색(0) 다르면 흰색(1)
+        mask = (input_array == gt_array).astype(np.float32)
+
+        # 변환 적용
+        if self.transforms:
+            input_image = self.transforms[&#x27;input&#x27;](input_image)
+            mask = self.transforms[&#x27;mask&#x27;](mask)
+
+        return input_image, mask
+
+# 데이터 변환 설정
+input_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5], std=[0.5])
+])
+
+mask_transform = transforms.Compose([
+    transforms.Lambda(lambda x: torch.from_numpy(x).unsqueeze(0))
+])
+
+# 데이터셋 및 데이터로더 생성
+# 전체 데이터셋 로드
+full_dataset = SegmentationDataset(
+    input_dir=train_x_path,
+    gt_dir=label_y_path,
+    transforms={&#x27;input&#x27;: input_transform, &#x27;mask&#x27;: mask_transform}
+)
+
+# 데이터셋을 8:2 비율로 분할
+train_size = int(0.8 * len(full_dataset))
+val_size = len(full_dataset) - train_size
+
+train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
+# 데이터로더 생성
+batch_size = 16
+
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+
+import gc
+gc.collect()
+torch.cuda.empty_cache()
+
+# TensorBoard 로그를 저장할 디렉토리 설정
+log_dir = &#x27;/content/drive/MyDrive/MLProject/MAT/tensorboard_logs&#x27;
+
+# SummaryWriter 생성
+writer = SummaryWriter(log_dir=log_dir)
+
+# 손실 함수 및 옵티마이저 설정
+criterion = nn.BCEWithLogitsLoss()
+optimizer = optim.Adam(model.parameters(), lr=1e-4)
+
+num_epochs = 3
+
+for epoch in range(num_epochs):
+    model.train()
+    running_loss = 0.0
+    train_loader_tqdm = tqdm(train_loader, desc=f&quot;Epoch [{epoch+1}/{num_epochs}]&quot;, unit=&quot;batch&quot;)
+
+    for batch_idx, (input_image, mask) in enumerate(train_loader_tqdm):
+        input_image = input_image.to(device)
+        mask = mask.to(device)
+
+        optimizer.zero_grad()
+
+        outputs = model(input_image)
+
+        loss = criterion(outputs, mask)
+
+        loss.backward()
+        optimizer.step()
+
+        running_loss += loss.item()
+
+    epoch_loss = running_loss / len(train_loader)
+    print(f&#x27;Epoch [{epoch+1}/{num_epochs}], Training Loss: {epoch_loss:.4f}&#x27;)
+
+    # TensorBoard에 기록
+    writer.add_scalar(&#x27;Loss/train&#x27;, epoch_loss, epoch)
+
+    # validation
+    model.eval()
+    val_loss = 0.0
+    with torch.no_grad():
+        for input_image, mask in tqdm(val_loader):
+            input_image = input_image.to(device)
+            mask = mask.to(device)
+
+            outputs = model(input_image)
+            loss = criterion(outputs, mask)
+
+            val_loss += loss.item()
+
+    val_loss /= len(val_loader)
+    print(f&#x27;Epoch [{epoch+1}/{num_epochs}], Validation Loss: {val_loss:.4f}&#x27;)
+
+    # TensorBoard에 검증 손실 기록
+    writer.add_scalar(&#x27;Loss/val&#x27;, val_loss, epoch)
+
+    # 모델 저장 (선택 사항)
+    torch.save(model.state_dict(), f&#x27;/content/drive/MyDrive/MLProject/MAT/maskGen/unet_epoch_{epoch+1}.pth&#x27;)
+
+# TensorBoard Writer 닫기
+writer.close()
+
+import os
+import matplotlib.pyplot as plt
+from PIL import Image
+
+device = torch.device(&#x27;cuda&#x27; if torch.cuda.is_available() else &#x27;cpu&#x27;)
+
+# 모델 로드
+model = UNet(in_channels=1, out_channels=1)
+model.load_state_dict(torch.load(&#x27;/content/drive/MyDrive/MLProject/MAT/maskGen/unet_epoch_3.pth&#x27;))
+model = model.to(device)
+
+# Train_image에 대해 mask를 생성
+def inference(model, image_path, device):
+    model.eval()
+    with torch.no_grad():
+        input_image = Image.open(image_path).convert(&#x27;L&#x27;) # 이미 흑백이므로 안 해도 됨
+
+        input_tensor = transforms.ToTensor()(input_image)
+        input_tensor = transforms.Normalize(mean=[0.5], std=[0.5])(input_tensor)
+        input_tensor = input_tensor.unsqueeze(0).to(device)
+
+        output = model(input_tensor)
+        output = torch.sigmoid(output)
+        output = output.squeeze().cpu().numpy()
+
+        # 모델 출력값이 0.5 이상이면 흰색으로 칠하기 위해
+        threshold = 0.5
+        binary_mask = (output &gt; threshold).astype(np.uint8)
+
+        # 마스크 이미지 생성
+        mask_image = Image.fromarray(binary_mask * 255)
+
+        return mask_image
+
+from tqdm import tqdm
+# 마스크 이미지를 저장할 디렉토리 설정
+#output_dir = &#x27;/content/drive/MyDrive/MLProject/MAT/masks&#x27;
+output_dir = &#x27;/content/drive/MyDrive/MLProject/tast_output_masks&#x27;
+# 디렉토리가 존재하지 않으면 생성
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# 입력 이미지 디렉토리 설정
+#input_dir = &#x27;/content/dataset/train_dataset/train_input&#x27;
+input_dir = &#x27;/content/drive/MyDrive/MLProject/test_input&#x27;
+i=0
+# 추론 및 결과 시각화 및 저장
+for img_name in tqdm(os.listdir(input_dir)):
+    #print(f&quot;Processing: {img_name}&quot;)
+    test_image_path = os.path.join(input_dir, img_name)
+    predicted_mask = inference(model, test_image_path, device)
+
+    # 마스크 이미지 저장 경로 설정
+    mask_save_path = os.path.join(output_dir, f&quot;mask_{img_name}&quot;)
+
+    # 마스크 이미지 저장
+    predicted_mask.save(mask_save_path)
+
+    # 원본 이미지 로드
+    original_image = Image.open(test_image_path).convert(&#x27;L&#x27;)
+
+    # 결과 시각화
+    if i &lt; 5:
+      plt.figure(figsize=(10, 5))
+
+      plt.subplot(1, 2, 1)
+      plt.imshow(original_image, cmap=&#x27;gray&#x27;)
+      plt.title(&#x27;Input Image&#x27;)
+      plt.axis(&#x27;off&#x27;)
+
+      plt.subplot(1, 2, 2)
+      plt.imshow(predicted_mask, cmap=&#x27;gray&#x27;)
+      plt.title(&#x27;Predicted Mask&#x27;)
+      plt.axis(&#x27;off&#x27;)
+
+      plt.show()
+      i = i + 1</code></pre><figure id="1600f86e-463d-807b-a77a-cf0be0401428" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2012.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2012.png"/></a></figure><p id="1600f86e-463d-80f0-b260-f714b7c0b6cf" class="">3번의 epoch로 꽤 정확히 mask 영역이 검은색으로 칠해진 mask 이미지를 생성할 수 있었다. 하지만 완벽히 정확하지는 않다.</p><figure id="1600f86e-463d-8029-b584-f6baf0b85cdb" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2013.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2013.png"/></a></figure><p id="1600f86e-463d-807d-859e-dc09955da9d2" class="">
+</p><ol type="1" id="1600f86e-463d-806b-abc7-e95149c50186" class="numbered-list" start="2"><li><strong>Train_input 전체에 대해 mask 생성</strong></li></ol><figure id="1600f86e-463d-8048-9fe9-e7d2fe9f7b42" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2014.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2014.png"/></a></figure><p id="1600f86e-463d-801d-a2f9-ef78fe45ab37" class="">위 모델을 통해 모든 이미지에 대해 mask를 생성하였다.</p><p id="1600f86e-463d-8055-a54c-eab79d2abd76" class="">
+</p><ol type="1" id="1600f86e-463d-8094-872c-d6d62887f8c5" class="numbered-list" start="3"><li><strong>MAT를 이용하여 Inpainting 수행</strong></li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1600f86e-463d-8076-b482-ccb6021e5804" class="code"><code class="language-Python">!git  clone https://github.com/fenglinglwb/MAT.git /content/drive/MyDrive/MLProject/MAT
+!pip install -r /content/drive/MyDrive/MLProject/MAT/requirements.txt
+!python /content/drive/MyDrive/MLProject/MAT/generate_image.py --network /content/drive/MyDrive/MLProject/MAT/CelebA-HQ_512.pkl --dpath /content/dataset/train_dataset/train_input --outdir /content/drive/MyDrive/MLProject/MAT/sample_ouput --mpath /content/drive/MyDrive/MLProject/MAT/masks</code></pre><p id="1600f86e-463d-8082-bd41-c8cafc778cbd" class="">논문에서 공개한 모델을 이용하여 Inpainting을 수행함. 해당 github 링크에서 자세한 사용법이 나와있음.</p><div id="1600f86e-463d-8028-96e8-d1c0121a2509" class="column-list"><div id="1600f86e-463d-803b-b925-d7f1273c461b" style="width:33.333333333333336%" class="column"><figure id="1600f86e-463d-80f7-91a1-f8a843e8b252" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001.png"><img style="width:511.9965515136719px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/TRAIN_00001.png"/></a><figcaption><strong>TRAIN_00001.png</strong></figcaption></figure></div><div id="1600f86e-463d-80b8-89c1-f29adf831379" style="width:33.333333333333336%" class="column"><figure id="1600f86e-463d-80e9-ae79-df1dd6d60e7e" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2015.png"><img style="width:331px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2015.png"/></a><figcaption>masks_TRAIN_00001.png</figcaption></figure><p id="1600f86e-463d-804d-8d62-cdf0d15466e7" class="">
+</p></div><div id="1600f86e-463d-8054-948e-fa8dfa2c59b2" style="width:33.33333333333333%" class="column"><figure id="1600f86e-463d-809c-8e44-e3579f98572f" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2016.png"><img style="width:514px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2016.png"/></a><figcaption>Inpainted_TRAIN_00001.png</figcaption></figure></div></div><p id="1600f86e-463d-80c7-99bb-fbd0027437cb" class="">
+</p><ol type="1" id="1600f86e-463d-80cf-aa8f-f7e4f01cf239" class="numbered-list" start="4"><li><strong>이전에 학습한 GAN을 이용하여 coloring</strong></li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1600f86e-463d-80f7-b69d-edc6e8618de4" class="code"><code class="language-Python">import os
+import torch
+from PIL import Image
+from torchvision import transforms
+from tqdm import tqdm
+import zipfile
+import pandas as pd
+
+# 디바이스 설정 (GPU 사용 가능하면 GPU 사용)
+device = torch.device(&#x27;cuda&#x27; if torch.cuda.is_available() else &#x27;cpu&#x27;)
+
+# 체크포인트 불러오기
+checkpoint = torch.load(&#x27;/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/checkpoint_epoch30.pth&#x27;)
+
+#모델 상태 불러오기
+generator.load_state_dict(checkpoint[&#x27;generator_state_dict&#x27;])
+discriminator.load_state_dict(checkpoint[&#x27;discriminator_state_dict&#x27;])
+
+# 테스트 데이터프레임 로드
+test_df = pd.read_csv(&#x27;/content/drive/MyDrive/MLProject/test.csv&#x27;)
+
+# 테스트 이미지 경로와 결과 저장 경로 설정
+base_path = &#x27;/content/drive/MyDrive/MLProject/MAT&#x27;  # 이미지 파일이 저장된 기본 경로
+output_dir = &#x27;/content/output_images&#x27;
+os.makedirs(output_dir, exist_ok=True)
+
+
+# 입력 이미지에 대한 변환 정의 (학습 시 사용한 것과 동일하게)
+input_transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.5], std=[0.5])
+])
+
+# 출력 이미지를 저장하기 위한 함수
+def tensor_to_pil(tensor):
+    # Denormalize
+    tensor = tensor.squeeze(0).cpu().clone()
+    tensor = tensor * 0.5 + 0.5  # [-1,1] -&gt; [0,1]
+    tensor = torch.clamp(tensor, 0, 1)
+    # Tensor에서 PIL 이미지로 변환
+    #tensor = tensor.permute(1, 2, 0)  # (C, H, W) -&gt; (H, W, C)
+    print(tensor.shape)
+    image = transforms.ToPILImage()(tensor)
+    return image
+
+# Inference
+generator.eval()
+i=0
+with torch.no_grad():
+    for idx in tqdm(range(len(test_df)), desc=&#x27;Inference&#x27;):
+        # 테스트 데이터프레임에서 이미지 경로 가져오기
+        input_image_rel_path = test_df.loc[idx, &#x27;input_image_path&#x27;].lstrip(&#x27;./&#x27;)
+        input_image_path = os.path.join(base_path, input_image_rel_path)
+        filename = os.path.basename(input_image_path)
+
+        # 입력 이미지 로드 및 전처리
+        input_image = Image.open(input_image_path).convert(&#x27;L&#x27;)
+        # 이미지 크기를 512x512로 조정 (필요한 경우)
+        # 변환 적용
+        input_tensor = input_transform(input_image).unsqueeze(0).to(device)
+
+        # Generator를 통해 출력 이미지 생성
+        gen_output = generator(input_tensor)
+        # 출력 텐서를 PIL 이미지로 변환
+        output_image = tensor_to_pil(gen_output)
+        # 결과 이미지 저장
+        output_path = os.path.join(output_dir, filename)
+        output_image.save(output_path)
+        if i &lt; 10:
+          plt.figure(figsize=(12, 4))
+          plt.subplot(1, 2, 1)
+          plt.imshow(input_image, cmap=&#x27;gray&#x27;)
+          plt.title(&#x27;Input Image&#x27;)
+          plt.axis(&#x27;off&#x27;)
+
+
+          plt.subplot(1, 2, 2)
+          plt.imshow(output_image)
+          plt.title(&#x27;Generated Image&#x27;)
+          plt.axis(&#x27;off&#x27;)
+
+          plt.show()
+          i = i + 1
+# 결과 이미지들을 ZIP 파일로 압축 (제출용)
+zip_filename = &#x27;/content/drive/MyDrive/MLProject/saved/GAN/MAT_GAN.zip&#x27;
+with zipfile.ZipFile(zip_filename, &#x27;w&#x27;) as zipf:
+    for filename in sorted(os.listdir(output_dir)):
+        if filename.endswith(&#x27;.png&#x27;):
+            file_path = os.path.join(output_dir, filename)
+            zipf.write(file_path, arcname=filename)
+</code></pre><figure id="1600f86e-463d-808f-94b3-f6233f14cf1c" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2017.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2017.png"/></a></figure><figure id="1600f86e-463d-8013-9dba-e1c24039556b" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2018.png"><img style="width:707.984375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2018.png"/></a></figure><p id="1600f86e-463d-804e-a0ee-fa34a9b7e45a" class="">눈으로 보기에는 mask 영역에 대해서는 어느 부분이 inpainting되었는지 찾아볼 수 없는 정도였지만, coloring도 완벽하지는 못한 모습을 보임.</p><p id="1600f86e-463d-8092-b8e0-e06836758841" class="">
+</p><p id="1600f86e-463d-80cd-8a11-d835ff4a3338" class="">
+</p><h1 id="1600f86e-463d-80a7-a1ce-e591c65acc53" class="">Review</h1><figure id="1600f86e-463d-802a-a8da-c8ff8d7a253a" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2019.png"><img style="width:707.890625px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2019.png"/></a></figure><ul id="1600f86e-463d-8055-95eb-c0314ce89fef" class="bulleted-list"><li style="list-style-type:disc">아쉽게도 기존 GAN과 별 차이없는 성적을 보임. MAT 결과물을 기반으로 Coloring하는 GAN을 따로 학습했으면 더 좋았을 것임.</li></ul><ul id="1600f86e-463d-8029-bd35-dd61f1bb57eb" class="bulleted-list"><li style="list-style-type:disc">Competition 종료 후, 1등 참가자가 자신의 코드를 공유했는데, 공교롭게도<strong> Inpainting에 동일한 모델(MAT)을</strong> 사용해서 매우 놀라웠음. Coloring을 더 잘 했더라면 좋은 성적이 나왔을 것 같음.</li></ul><div id="1600f86e-463d-8025-84b4-fe03425bba57" class="column-list"><div id="1600f86e-463d-80ba-bfd7-fd69b29f7055" style="width:25%" class="column"><figure id="1600f86e-463d-8030-8f26-df2dd158ddd8" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2020.png"><img style="width:142.484375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2020.png"/></a></figure></div><div id="1600f86e-463d-802c-876d-c43b5eca8722" style="width:25.000000000000007%" class="column"><figure id="1600f86e-463d-8055-813d-e115cae4f4cb" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2021.png"><img style="width:142.484375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2021.png"/></a></figure></div><div id="1600f86e-463d-80a3-ba6e-d63fbd5b95dd" style="width:25%" class="column"><figure id="1600f86e-463d-805c-a193-fa12f781fea0" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2022.png"><img style="width:142.484375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2022.png"/></a></figure></div><div id="1600f86e-463d-80dc-a7ae-fc7b2a1a1654" style="width:25%" class="column"><figure id="1600f86e-463d-8003-bd62-e7f8ad80bc77" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2023.png"><img style="width:142.484375px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2023.png"/></a></figure></div></div><p id="1600f86e-463d-8015-9989-eb3446c45821" class="">위 사진은 대회 1등의 결과물이다. (<a href="https://dacon.io/competitions/official/236420/codeshare/12131?page=1&amp;dtype=recent">https://dacon.io/competitions/official/236420/codeshare/12131?page=1&amp;dtype=recent</a>)</p><p id="1600f86e-463d-808f-b785-e44a172eefcd" class="">
+</p><ul id="1600f86e-463d-800a-8a39-dd39457dd961" class="bulleted-list"><li style="list-style-type:disc">최종 결과</li></ul><figure id="1600f86e-463d-806b-bfee-c83803e767e1" class="image"><a href="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2024.png"><img style="width:707.96875px" src="%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%2015f0f86e463d8041a3f9e8d63f3d8985/image%2024.png"/></a></figure><p id="1600f86e-463d-807d-b684-deeaedf8f0b0" class="">
+</p><p id="1600f86e-463d-80ed-a6d7-c9ca2f1566c7" class="">
+</p><h2 id="1600f86e-463d-80cc-b833-cb5fe74e8fca" class="">프로젝트를 진행하며 느낀 점</h2><ul id="1600f86e-463d-8090-b8f8-efdfc3288232" class="bulleted-list"><li style="list-style-type:disc">시간, 비용적 문제로 Image Augmentation 등 더 많은 데이터를 학습에 사용하지 못한 점이 아쉽다.</li></ul><ul id="1600f86e-463d-80a6-978d-d50b61a89b1a" class="bulleted-list"><li style="list-style-type:disc">Coloring 전문 모델을 더 찾아봤으면 좋았을 것이다.</li></ul><ul id="1600f86e-463d-8085-bfee-f04eda4edbd2" class="bulleted-list"><li style="list-style-type:disc">생각보다 아주 근소한 점수 차이로 순위가 갈리는 것이 신기했다.</li></ul><ul id="1600f86e-463d-80a7-9638-ce5f5c6145bd" class="bulleted-list"><li style="list-style-type:disc">Mask 생성 모델을 직접 구현하였는데, openCV 기반 모델 등 더 나은 모델을 찾아봤으면 더 좋은 결과가 있었을 것같다.</li></ul><ul id="1600f86e-463d-8019-8b4e-f82251510855" class="bulleted-list"><li style="list-style-type:disc">수업 시간에 배운 지식들(CNN, Tranformer, Normalization 등)을 기반으로 논문을 찾아보며 단순 Pre-trained model 사용에 그치는 것이 아닌 논문에 대한 대략적인 이해(수학적으로는 아니지만) 할 수 있었다.</li></ul><ul id="1600f86e-463d-80ea-9a0e-d3e7e24f3281" class="bulleted-list"><li style="list-style-type:disc">프로젝트를 진행하면서 Pytorch, colab 등에 대한 사용법을 익힐 수 있었다.</li></ul><p id="1600f86e-463d-80b4-aed5-fcec024a7374" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
