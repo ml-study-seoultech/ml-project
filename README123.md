@@ -40,13 +40,13 @@ open/
 
 ## Sample Data
 
-![스크린샷 2024-12-18 17.33.55.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.33.55.png)
+![스크린샷 2024-12-18 17.33.55.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.33.55.png)
 
 # First approach : GAN
 
 생성적 적대 생성망 GAN(Generative Adversarial Network)
 
-![스크린샷 2024-12-18 17.42.15.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.42.15.png)
+![스크린샷 2024-12-18 17.42.15.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.42.15.png)
 
 GAN은 이미지를 만들어내는 Generator와, 이를 판별하는 Discriminator로 구별됨.
 
@@ -82,7 +82,7 @@ class GeneratorUNet(nn.Module):
 
 ### U-net
 
-![Ronneberger, O., Fischer, P., & Brox, T. (2015). *U-Net: Convolutional networks for biomedical image segmentation*. In *International Conference on Medical Image Computing and Computer-Assisted Intervention* (pp. 234–241). Springer, Cham.](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-17_13.19.43.png)
+![Ronneberger, O., Fischer, P., & Brox, T. (2015). *U-Net: Convolutional networks for biomedical image segmentation*. In *International Conference on Medical Image Computing and Computer-Assisted Intervention* (pp. 234–241). Springer, Cham.](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-17_13.19.43.png)
 
 Ronneberger, O., Fischer, P., & Brox, T. (2015). *U-Net: Convolutional networks for biomedical image segmentation*. In *International Conference on Medical Image Computing and Computer-Assisted Intervention* (pp. 234–241). Springer, Cham.
 
@@ -688,13 +688,13 @@ torch.save(checkpoint, '/content/drive/MyDrive/MLProject/saved/GAN/checkpoints/c
 
 ### Training Review
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image.png)
+![image.png](./images/image.png)
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%201.png)
+![image.png](./images/image%201.png)
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%202.png)
+![image.png](./images/image%202.png)
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%203.png)
+![image.png](./images/image%203.png)
 
 Training 하면서 보니, 색칠은 그럭저럭 잘 되는 것 같은데 mask recovering이 잘 되지 않는 것으로 보였다. Tensorboard를 보니 학습은 매우 불안정했지만 Generator loss는 계속 감소했기 때문에, 이미지 증강을 통한 더 많은 데이터, 더 많은 반복 학습을 통하면 더 개선될 수 있지 않았을까 생각한다.
 
@@ -702,7 +702,7 @@ Training 하면서 보니, 색칠은 그럭저럭 잘 되는 것 같은데 mask 
 
 Papers With Code에서, 채우기만 전문으로 학습된 모델이 없을까 찾아보았는데, 
 
-![[https://paperswithcode.com/task/image-inpainting#datasets](https://paperswithcode.com/task/image-inpainting#datasets)](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%204.png)
+![[https://paperswithcode.com/task/image-inpainting#datasets](https://paperswithcode.com/task/image-inpainting#datasets)](./images/image%204.png)
 
 [https://paperswithcode.com/task/image-inpainting#datasets](https://paperswithcode.com/task/image-inpainting#datasets)
 
@@ -710,9 +710,9 @@ Papers With Code에서, 채우기만 전문으로 학습된 모델이 없을까 
 
 ### MAT: Mask-Aware Transformer for Large Hole Image Inpainting
 
-![스크린샷 2024-12-18 17.46.59.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.46.59.png)
+![스크린샷 2024-12-18 17.46.59.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.46.59.png)
 
-![스크린샷 2024-12-18 17.41.18.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.41.18.png)
+![스크린샷 2024-12-18 17.41.18.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.41.18.png)
 
 기존 접근법(CNN 기반 모델, 트랜스포머 기반 모델)은 한계를 가진다고 함.
 
@@ -742,7 +742,7 @@ Papers With Code에서, 채우기만 전문으로 학습된 모델이 없을까 
     - 전체 입력 토큰에 대해 Attention 계산
 - **Multi-Head Contextual Attention (MCA):**
     
-    ![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%205.png)
+    ![image.png](./images/image%205.png)
     
 
 - 입력 토큰을 고정된 크기의 window로 나눈 뒤, 각 window 내에서만 attention 계산 수행, attention 수행 후 window 이동시키기 (w*w size에서  $(⌊
@@ -759,7 +759,7 @@ w/
     information to inpaint the holes, but also undermines the effective valid pixels* (원문)
     - 기존 attention 계산을 사용하면 Missing area가 많을수록 missing area의 정보도 계산에 사용하기 때문에 좋지 않다고 함
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%206.png)
+![image.png](./images/image%206.png)
 
 $τ$는 매우 큰 자연수. Foward step에서 Mask는 업데이트되는데, 규칙은 다음과 같음.
 
@@ -787,7 +787,7 @@ Transformer block 차이점 정리
 1. **TRAIN_input에 대한 mask 생성 → mask를 생성하는 모델 만들기**
 - MAT 모델은 검은색으로 마스킹된 부분에 대해서만 inpainting작업을 수행한다.  따라서 train_input에서 어떤 부분이 mask되었는지 판별하여, 그 부분에 대해서만 검은색으로 색칠된  mask image가 필요
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%207.png)
+![image.png](./images/image%207.png)
 
 - Train 이미지의 masking 영역은 완전한 검은색 또는 회색 등 일정한 색이 아니다.
     
@@ -1177,15 +1177,15 @@ for img_name in tqdm(os.listdir(input_dir)):
       i = i + 1
 ```
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%208.png)
+![image.png](./images/image%208.png)
 
 3번의 epoch로 꽤 정확히 mask 영역이 검은색으로 칠해진 mask 이미지를 생성할 수 있었다. 하지만 완벽히 정확하지는 않다.
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%209.png)
+![image.png](./images/image%209.png)
 
 1. **Train_input 전체에 대해 mask 생성**
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%2010.png)
+![image.png](./images/image%2010.png)
 
 위 모델을 통해 모든 이미지에 대해 mask를 생성하였다.
 
@@ -1199,7 +1199,7 @@ for img_name in tqdm(os.listdir(input_dir)):
 
 논문에서 공개한 모델을 이용하여 Inpainting을 수행함. 해당 github 링크에서 자세한 사용법이 나와있음.
 
-![스크린샷 2024-12-18 17.34.44.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.34.44.png)
+![스크린샷 2024-12-18 17.34.44.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.34.44.png)
 
 1. **이전에 학습한 GAN을 이용하여 coloring**
 
@@ -1295,26 +1295,26 @@ with zipfile.ZipFile(zip_filename, 'w') as zipf:
 
 ```
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%2011.png)
+![image.png](./images/image%2011.png)
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%2012.png)
+![image.png](./images/image%2012.png)
 
 눈으로 보기에는 mask 영역에 대해서는 어느 부분이 inpainting되었는지 찾아볼 수 없는 정도였지만, coloring도 완벽하지는 못한 모습을 보임.
 
 # Review
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%2013.png)
+![image.png](./images/image%2013.png)
 
 - 아쉽게도 기존 GAN과 별 차이없는 성적을 보임. MAT 결과물을 기반으로 Coloring하는 GAN을 따로 학습했으면 더 좋았을 것임.
 - Competition 종료 후, 1등 참가자가 자신의 코드를 공유했는데, 공교롭게도 **Inpainting에 동일한 모델(MAT)을** 사용해서 매우 놀라웠음. Coloring을 더 잘 했더라면 좋은 성적이 나왔을 것 같음.
 
-![스크린샷 2024-12-18 17.35.24.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.35.24.png)
+![스크린샷 2024-12-18 17.35.24.png](./images/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-12-18_17.35.24.png)
 
 위 사진은 대회 1등의 결과물이다. ([https://dacon.io/competitions/official/236420/codeshare/12131?page=1&dtype=recent](https://dacon.io/competitions/official/236420/codeshare/12131?page=1&dtype=recent))
 
 - 최종 결과
 
-![image.png](https://github.com/ml-study-seoultech/ml-project/tree/dove9441/images/image%2014.png)
+![image.png](./images/image%2014.png)
 
 ## 프로젝트를 진행하며 느낀 점
 
